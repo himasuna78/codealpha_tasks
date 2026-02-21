@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #00adb5);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  transition: 0.3s ease;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 15px 50px;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #00adb5;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-img {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.tilt-card {
+  width: 180px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #00adb5;
+  transition: 0.2s;
+}
+
+.btn {
+  background: linear-gradient(45deg, #00adb5, #00f5ff);
+  padding: 14px 30px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0, 173, 181, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 173, 181, 0.6);
+}
+
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+.skills-container {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.progress {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.bar {
+  background: #222;
+  height: 12px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.fill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #00adb5, #00f5ff);
+  box-shadow: 0 0 15px #00f5ff;
+  transition: 2s ease;
+}
+
+.project-card {
+  width: 300px;
+  margin: 30px auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover {
+  transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 173, 181, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+}
+
+.project-title {
+  margin: 15px 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #00adb5;
+}
+
+footer {
+  padding: 30px 20px;
+  background: black;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+
+.social-icons a:nth-child(1):hover {
+  color: #e1306c;
+}
+.social-icons a:nth-child(2):hover {
+  color: #0077b5;
+}
+.social-icons a:nth-child(3):hover {
+  color: #333;
+}
+
+.dark {
+  background: #f4f4f4;
+  color: black;
+}
+
+@keyframes float3d {
+  0% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(10deg);
+  }
+  100% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+}
+
+.tilt-card {
+  animation: float3d 4s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#theme-toggle {
+  font-size: medium;
+}
+
+/* Hide only default nav links (if any) */
+nav > ul:not(.dropdown) {
+  display: none;
+}
+
+/* Hamburger Button */
+.menu-btn {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: 25px;
+  z-index: 2000;
+}
+
+.menu-btn span {
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  list-style: none;
+  padding: 20px;
+  width: 180px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(-15px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.dropdown li a:hover {
+  color: #00adb5;
+}
+
+.dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(9px);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-9px);
+}
+
+.theme-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Himanshu | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <canvas id="particles"></canvas>
+    <header>
+      <nav>
+        <div class="logo-container">
+          <img src="himanshu.jpg" class="nav-profile" alt="Himanshu" />
+          <h2 class="logo">Himanshu</h2>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="menu-btn" id="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <ul class="dropdown" id="dropdown">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="profile-img">
+      <div class="profile-content">
+        <div class="tilt-card">
+          <img src="himanshu.jpg" class="card-img" alt="Himanshu" />
+        </div>
+
+        <h1>Hi, I'm Himanshu 👋</h1>
+        <h2 class="typing"></h2>
+
+        <a href="#projects" class="btn">View Projects</a>
+      </div>
+    </section>
+
+    <section id="about" class="section hidden">
+      <h2>About Me</h2>
+
+      <p class="about-text">
+        I am a motivated and detail-oriented Full Stack Developer with a strong
+        foundation in building modern, responsive, and scalable web
+        applications. I specialize in the MERN stack and have hands-on
+        experience working with HTML, CSS, JavaScript, Node.js, MySQL, and
+        MongoDB.
+      </p>
+
+      <p class="about-text">
+        I am passionate about transforming ideas into efficient digital
+        solutions and writing clean, maintainable, and well-structured code. My
+        focus is not only on functionality but also on delivering a seamless and
+        user-friendly experience.
+      </p>
+
+      <p class="about-text">
+        I continuously strive to enhance my technical skills, stay updated with
+        industry trends, and adopt best practices in software development. I am
+        committed to problem-solving, continuous learning, and delivering
+        high-quality results whether working independently or as part of a team.
+      </p>
+    </section>
+
+    <section id="skills" class="section hidden">
+      <h2>Skills</h2>
+
+      <div class="skills-container">
+        <div class="progress">
+          <span>HTML</span>
+          <div class="bar"><div class="fill" data-width="90%"></div></div>
+        </div>
+
+        <div class="progress">
+          <span>CSS</span>
+          <div class="bar"><div class="fill" data-width="90%"></div></div>
+        </div>
+
+        <div class="progress">
+          <span>JavaScript</span>
+          <div class="bar"><div class="fill" data-width="80%"></div></div>
+        </div>
+
+        <div class="progress">
+          <span>Node.js</span>
+          <div class="bar"><div class="fill" data-width="85%"></div></div>
+        </div>
+
+        <div class="progress">
+          <span>Express.js</span>
+          <div class="bar"><div class="fill" data-width="80%"></div></div>
+        </div>
+
+        <div class="progress">
+          <span>MongoDB</span>
+          <div class="bar"><div class="fill" data-width="75%"></div></div>
+        </div>
+
+        <div class="progress">
+          <span>MySQL</span>
+          <div class="bar"><div class="fill" data-width="85%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section hidden">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <img src="https://picsum.photos/400/250" alt="" />
+        <div class="overlay"><p>View Live Project</p></div>
+        <h3 class="project-title">Wanderlust</h3>
+      </div>
+
+      <div class="project-card">
+        <img
+          src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?q=80&w=800&auto=format&fit=crop"
+          alt="Calculator"
+        />
+        <div class="overlay"><p>View Live Project</p></div>
+        <h3 class="project-title">Calculator</h3>
+      </div>
+    </section>
+
+    <section id="contact" class="section hidden">
+      <h2>Contact Me</h2>
+
+      <p>
+        Email:
+        <a href="mailto:kumarhimanshu6158@gmail.com" class="contact-link">
+          kumarhimanshu6158@gmail.com
+        </a>
+      </p>
+
+      <p>Phone: +91 9473814973</p>
+    </section>
+
+    <footer>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/himanshu_42004/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/himanshu-920b0331a/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://github.com/himasuna78" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <p>© 2026 Himanshu</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
