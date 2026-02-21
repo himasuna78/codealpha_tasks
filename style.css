@@ -446,3 +446,51 @@ nav > ul:not(.dropdown) {
 .project-buttons a:hover {
   background: #008f95;
 }
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.education-card {
+  width: 350px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 173, 181, 0.2),
+    rgba(0, 0, 0, 0.4)
+  );
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 173, 181, 0.3);
+  backdrop-filter: blur(10px);
+  transition: 0.4s ease;
+  text-align: left;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 173, 181, 0.6);
+}
+
+.education-card h3 {
+  margin-bottom: 10px;
+}
+
+.edu-school {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.edu-year {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.edu-desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
